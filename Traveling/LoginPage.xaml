@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Traveling.LoginPage">
+	<StackLayout Orientation="Vertical" 
+        VerticalOptions="Center"
+        HorizontalOptions="CenterAndExpand">
+        <Image Source="Logo.png" />
+        <Label Text="" />
+        <Button Image="facebook.png" Text="Login com Facebook" BackgroundColor="#3b5998" TextColor="White" 
+            Command="{Binding LoginCommand}" />
+    </StackLayout>
+</ContentPage>

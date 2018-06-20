@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="Traveling.RoteiroPage"
+    xmlns:cc="clr-namespace:Traveling.CustomControls;assembly:Traveling"
+    Title="{Binding _roteiro.Nome}">
+        <cc:CustomListView
+            ItemsSource="{Binding RoteiroItens}"
+            HasUnevenRows="true"
+            ItemTappedCommand="{Binding ShowRoteiroItemCommand}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Padding="20">
+                            <Label Text="{Binding Descricao}" TextColor="Black" Font="Large" />
+                            <Label Text="{Binding Data, StringFormat='{0:dd/MM/yyyy}'}" TextColor="Black" Font="Medium" />
+                            <Label Text="{Binding Street}" TextColor="Gray" Font="Medium" />
+                            <Label Text="{Binding City}" TextColor="Gray" Font="Medium" />
+                            <Label Text="{Binding Country}" TextColor="Gray" Font="Medium" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </cc:CustomListView>
+</ContentPage>
